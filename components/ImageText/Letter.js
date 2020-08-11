@@ -10,7 +10,7 @@ const Letter = styled(_Letter)`
   width: 1em;
   height: 1em;
   font-family: "Coda Caption", sans-serif;
-  font-size: ${({ size }) => size || 7.5}vw;
+  font-size: ${({ size }) => size || "7.5vw"};
   line-height: 1em;
   display: inline-block;
 `;
