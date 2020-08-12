@@ -4,15 +4,24 @@ import ImageText from "../components/ImageText";
 import Socials from "../components/Socials";
 
 const Title = styled.div`
-  margin: 12.5vh 0px 0px 48px;
+  margin: 10vh 0px 0px 48px;
 
   @media screen and (max-width: 992px) {
     margin: 8vh 0px 0px 48px;
   }
 
   @media screen and (max-width: 600px) {
-    margin: 6vh 0px 0px 48px;
+    margin: 6vh 0px 0px 32px;
   }
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  pointer-events: none;
 `;
 
 const data = [
@@ -24,6 +33,10 @@ const data = [
   {
     variant: "facebook",
     link: "https://www.facebook.com/plakaciary",
+  },
+  {
+    variant: "snapchat",
+    link: "https://www.snapchat.com/add/plakaciary_pl",
   },
 ];
 

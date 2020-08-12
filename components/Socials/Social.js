@@ -1,5 +1,6 @@
 import React from "react";
 import { FiTwitter, FiInstagram, FiFacebook } from "react-icons/fi";
+import { RiSnapchatLine } from "react-icons/ri";
 import styled from "styled-components";
 
 function _Social({ variant, link, size, className }) {
@@ -8,6 +9,7 @@ function _Social({ variant, link, size, className }) {
     twitter: <FiTwitter size={size || default_size} />,
     instagram: <FiInstagram size={size || default_size} />,
     facebook: <FiFacebook size={size || default_size} />,
+    snapchat: <RiSnapchatLine size={size || default_size} />,
   };
   return (
     <a className={className} href={link}>

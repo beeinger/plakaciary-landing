@@ -5,8 +5,8 @@ import styled from "styled-components";
 function _Socials({ data, className }) {
   return (
     <div className={className}>
-      {data.map((val) => (
-        <Social variant={val.variant} link={val.link} />
+      {data.map((val, idx) => (
+        <Social variant={val.variant} link={val.link} key={idx} />
       ))}
     </div>
   );
