@@ -9,7 +9,8 @@ const Layout = styled.div`
 
 const Title = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 32px;
 `;
 
@@ -25,6 +26,10 @@ const Red = styled.b`
 const Center = styled.div`
   display: flex;
   justify-content: center;
+`;
+
+const PointerH3 = styled.h3`
+  cursor: pointer;
 `;
 
 export default function faq() {
@@ -52,26 +57,32 @@ export default function faq() {
     <Layout>
       <Title>
         <ImageText>FAQ</ImageText>
+        <ImageText size="3em">W TRAKCIE PRACY</ImageText>
       </Title>
       <Body>
         <h1>Spis Treści:</h1>
         <br />
         <ol>
-          {titles.map((val, idx) => (
-            <>
-              <h3 key={idx}>
-                <li>{val}</li>
-              </h3>
-              <br />
-            </>
-          ))}
+          {titles.map((val, idx) => {
+            const href = "#" + val;
+            return (
+              <>
+                <PointerH3 key={idx}>
+                  <a href={href}>
+                    <li href={href}>{val}</li>
+                  </a>
+                </PointerH3>
+                <br />
+              </>
+            );
+          })}
         </ol>
         <hr />
         <hr />
         <hr />
         <br />
         <ol>
-          <h3>
+          <h3 id={titles[0]}>
             <li>{titles[0]}</li>
           </h3>
           Tak, tak i taaaaaaaaaaaak!!! Na wiele sposobów:
@@ -204,7 +215,7 @@ export default function faq() {
           ogromna.
           <br />
           <br />
-          <h3>
+          <h3 id={titles[1]}>
             <li>{titles[1]}</li>
           </h3>
           <ol>
@@ -267,7 +278,7 @@ export default function faq() {
           prostu NIE MA!!!
           <br />
           <br />
-          <h3>
+          <h3 id={titles[2]}>
             <li>{titles[2]}</li>
           </h3>
           Wszystko zależy od tego GDZIE plakatujesz:
@@ -336,7 +347,7 @@ export default function faq() {
           PS.
           <br />
           Zawsze nosimy przy sobie dowód dożsamości.
-          <h3>
+          <h3 id={titles[3]}>
             <li>{titles[3]}</li>
           </h3>
           PLAKACIARY działają wszędzie tam, gdzie znajdzie się entuzjastyczna
@@ -524,7 +535,7 @@ export default function faq() {
           <br />
           <br />
           Wspólnie zwalczmy kulturę gwałtu!
-          <h3>
+          <h3 id={titles[4]}>
             <li>{titles[4]}</li>
           </h3>
           Ile głów i temperamentów, tyle sposobów!
