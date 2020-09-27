@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ImageText from "../components/ImageText";
 import Socials from "../components/Socials";
+import Router from "next/router";
 
 const Title = styled.div`
   margin: 10vh 0px 0px 48px;
@@ -22,6 +23,17 @@ const Title = styled.div`
   user-select: none;
 
   pointer-events: none;
+`;
+
+const FAQ = styled.div`
+  position: fixed;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+
+  > div {
+    cursor: pointer;
+  }
 `;
 
 const data = [
@@ -47,6 +59,13 @@ export default function Main() {
         <ImageText>PLAKACIARY</ImageText>
         <ImageText>NADCHODZĄ</ImageText>
       </Title>
+      <FAQ>
+        <div>
+          <ImageText size="3em" onClick={() => Router.push("/faq")}>
+            FAQ
+          </ImageText>
+        </div>
+      </FAQ>
       <Socials data={data} />
     </>
   );
