@@ -5,6 +5,14 @@ import grupy from "../resources/images/grupy.png";
 
 const Layout = styled.div`
   margin: 5vh 15vw 100px 15vw;
+
+  @media screen and (max-width: 992px) {
+    margin: 8vh 0px 0px 48px;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin: 6vh 0px 0px 32px;
+  }
 `;
 
 const Title = styled.div`
