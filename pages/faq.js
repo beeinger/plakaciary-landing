@@ -4,14 +4,27 @@ import ImageText from "../components/ImageText";
 import grupy from "../resources/images/grupy.png";
 
 const Layout = styled.div`
-  margin: 5vh 15vw 100px 15vw;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  margin: 5vh 15vw 0 15vw;
 
   @media screen and (max-width: 992px) {
-    margin: 8vh 0px 0px 48px;
+    margin: 5vh 8vw 0 7vw;
   }
 
   @media screen and (max-width: 600px) {
-    margin: 6vh 0px 0px 32px;
+    font-size: 0.7em;
+    margin: 5vh 8vw 0 7vw;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
   }
 `;
 
@@ -29,11 +42,6 @@ const Body = styled.div`
 
 const Red = styled.b`
   color: red;
-`;
-
-const Center = styled.div`
-  display: flex;
-  justify-content: center;
 `;
 
 const PointerH3 = styled.h3`
@@ -64,8 +72,9 @@ export default function faq() {
   return (
     <Layout>
       <Title>
-        <ImageText>FAQ</ImageText>
-        <ImageText size="3em">W TRAKCIE PRACY</ImageText>
+        <ImageText size="9em">FAQ</ImageText>
+        <ImageText size="3em">W TRAKCIE</ImageText>
+        <ImageText size="3em">PRACY</ImageText>
       </Title>
       <Body>
         <h1>Spis Treści:</h1>
@@ -111,8 +120,8 @@ export default function faq() {
               szkole, w pracy, u fryzjera, u kosmetyczki, w warsztatcie
               samochodowym czy na pifku z kumpelkami czy kumplami itp.
             </li>
-            <h3>DOŚĆ MILCZENIA – CZAS MÓWIENIA!</h3>
           </ul>
+          <h3>DOŚĆ MILCZENIA – CZAS MÓWIENIA!</h3>
           Oto nasze aktualnie zidentyfikowane potrzeby, ułożone według pilności:
           <br />
           <br />
@@ -371,9 +380,7 @@ export default function faq() {
           znajdziesz w zakładce GRUPY na naszym fan peju:
           <br />
           <br />
-          <Center>
-            <img src={grupy} />
-          </Center>
+          <img src={grupy} />
           <br />
           <br />
           Oto istniejące obecnie grupy:
@@ -558,9 +565,7 @@ export default function faq() {
           peju:
           <br />
           <br />
-          <Center>
-            <img src={grupy} />
-          </Center>
+          <img src={grupy} />
           <br />
           <br />
           Oto istniejące obecnie grupy:
