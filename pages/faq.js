@@ -426,6 +426,7 @@ export default function faq() {
           <br />
           Oto istniejące obecnie grupy:
           <br />
+          <br />
           <ul type="none">
             <li>
               <a href="https://www.facebook.com/groups/514364832501689/">
@@ -527,67 +528,67 @@ export default function faq() {
           tutaj
           <br />
           <br />
-          Nie pragniemy nikogo wykluczać z działania, jednak do naszych grup nie
-          przyjmujemy cis-panów z następujących powodów:
+          Dzięki za zainteresowanie PLAKACIARAMI.
+          <br />
+          <br />
+          Super, że chcesz do nas dołączyć i że widzisz potrzebę działania! HELL
+          YEAH!!! PLAKACIARY to samoorganizujący się ruch oddolny, otwarty dla
+          każdej NIEprzemocowej OSOBY, która pragnie plakatować feministyczne,
+          anty-przemocowe, anty-opresyjne hasła i która zgadza się z naszymi
+          wartościami oraz naszym sposobem działania.
+          <br />
+          <br />
+          Wiedz jednak, iż z pewnych powodów, przedstawionymi poniżej, do
+          naszych grup na fejsbuku, nie przyjmujemy CIS-panów. Jest to
+          motywowane następującymi kwestiami:
           <br />
           <br />
           <ol>
             <li>
-              Nasza inicjatywa ma na celu pomóc KOBIETOM zająć oddolnie
-              przestrzeń publiczną, w której doświadczają one na co dzień
+              nasza inicjatywa ma na celu pomóc KOBIETOM zająć oddolnie
+              przestrzeń publiczną, w której doświadczają na co dzień
               opresyjnego traktowania, w tym: obmacywania, ekshibicjonizmu,
-              atakowania i gwałtów. Przestrzeni, w której nie czują się na co
-              dzień bezpiecznie jeśli nie towarzyszy im zaufany mężczyzna.
-              Możliwość ‘przejęcia’ tej przestrzeni bez (wspierającej) męskiej
-              obecności i poczucie się w niej „silną” jest dla nas zasadnicza i
-              uważamy takie doświadczenie za wyzwalające.
+              atakowania i gwałtów. Przestrzeni, w której nie czują się na
+              codzień bezpiecznie jeśli nie towarzyszy im zaufany mężczyzna.
+              Możliwość PRZEJĘCIA tej przestrzeni bez (wspierającej) męskiej
+              obecności i poczucie się w niej SILNĄ i SPRAWCZĄ jest dla nas
+              zasadnicza i uważamy takie doświadczenie za wyzwalające i
+              NIEZBĘDNE do życia dla KAŻDEJ z nas.
             </li>
             <li>
-              Na naszych grupach obecne są ofiary przemocy seksualnej, fizycznej
-              i innej. Obecność cis-mężczyzn może sprawić, że trudniej będzie im
-              się otworzyć. Chcemy również zachować jak największe środki
-              bezpieczeństwa aby zapobiec tzw. „wynosicielstwu”, gdyż temat jest
-              poważna, a niektóre osoby nie wiedzą czasami gdzie postawić
-              granicę do „śmieszkowania”, „tyrania beki” etc.
+              na naszych grupach obecne są ofiary przemocy seksualnej,
+              fizycznej, psychicznej i innej. Obecność mężczyzn może sprawić, że
+              mogą poczuć się one przez nich onieśmielone i trudniej będzie im
+              przez to się otworzyć czy zaangażować. Pragniemy również zachować
+              jak największe środki bezpieczeństwa gdyż temat jest dużego
+              kalibru, a nie wszyscy zostali wyposażeni w minimum inteligencji
+              emocjonalnej niezbędnej do obracania się w takich problematykach.
             </li>
             <li>
-              Jest dla nas ważne, aby feminizm był konstruowany przez kobiety i
-              żeby to ich głos było słychać. Mężczyźni to nasi sojusznicy –
-              zasadniczy i ważny element ruchu – ale tutaj organizujemy się bez
-              Was. Ma to na celu zapobiec reprodukowaniu w feminizmie tych
-              samych schematów opresji, których kobiety doświadczają poza nim.
-            </li>
-            <li>
-              Niemożliwym jest dla nas tak naprawdę sprawdzenia kto RZECZYWIŚCIE
-              kryje się za danym profilem i jakie są jego prawdziwe intencje, a
-              czasami – zdarzyło nam się to kilkukrotnie – niektórzy panowie
-              pragną dołączyć do naszych grup tylko po to, aby je „rozwalać od
-              środka”...
+              ważne jest dla nas, aby feminizm był konstruowany przez kobiety i
+              żeby to ICH głos było słychać. Wyraźnie i GŁOŚNO. Mężczyźni to
+              nasi sojusznicy – zasadniczy i ważny element ruchu – ale ich
+              obecność jest niezbędna w nieco innym wymiarze. Ma to na celu
+              zapobiec reprodukowaniu w feminizmie tych samych schematów
+              opresji, których kobiety doświadczają poza nim. To tyle jeśli
+              chodzi o część teoretyczną i o grupy fesjbuskowe.
             </li>
           </ol>
           <br />
-          Nasze fejsbukowe grupy to nasze "wuefowe szatnie". Jednak to, że nie
-          wpuszczamy do nich CIS-mężczyzn nie oznacza, że następnie nie możemy
-          wspólnie grać w siatkę czy w kosza.
+          Chłopaki TEŻ plakatują - z koleżankami! Albo pomagają nam w
+          organizacji i ogarnianiu ruchu. Ale musimy ich NAJPIERW poznać w REALU
+          aby przekonać się kim są i co sobą reprezentują, bo na fejsie jest to
+          po prostu niemożliwe. Każdy jest tu anonimowy, więc nasze fejsbukowe
+          grupy są dla nas takimi "wuefowymi szatniami". Ale tylko dlatego że
+          nie wpuszczamy do nich CIS-chłopaków nie znaczy, że potem nie możemy
+          razem grać w siatkę czy w kosza, no nie?
           <br />
-          Panowie TEŻ plakatują - z koleżankami na przykład - i w różnoraki inny
-          sposób nam pomagają, np. w organizacji i ogarnianiu ruchu. Ale
-          cis-kolegów musimy NAJPIERW poznać w REALU aby przekonać się KIM są i
-          CO sobą reprezentują, bo na fejsie jest to po prostu niemożliwe, bo
-          każdy jest tu anonimowy. Proponujemy więc wszystkim chętnym kolegom
-          dołączać do plakatujących koleżanek… albo, LEPIEJ, ZACHĘCAĆ obecne w
-          ich życiu kobiety - przyjaciółki, siostry, koleżanki, koleżanki żony,
-          narzeczonej, dziewczyny lub chłopaka, kuzynki, mamy, ciotki i babcie,
-          aby ruszyły z Wami w miasto! A następnie podesłały nam owoce Waszej
-          wspólnej akcji: abyście mogły dostać instrukcje jak do nas dołączyć
-          POZA FEJSEM!
-          <br />
-          <br />W między czasie, zawsze możesz dorzucić się na plakaciarskie
-          materiały: <a href="https://zrzutka.pl/wdy5bp">zrzutka</a>
-          <br />
-          <br />
-          Pamiętaj: nie potrzebujesz naszego błogosławieństwa aby wyjść w miasto
-          i plakatować!
+          Proponujemy więc dołączyć Ci do plakatujących już koleżanek… albo –
+          LEPIEJ – do ZACHĘCENIA wahających się lub nieśmiałych dziewczyn
+          (przyjaciółek, sióstr, koleżanek, żony, kuzynek, mamy, babci czy też
+          tej super fajnej pani sklepowej co się z nią zaśmiewasz przy każdym
+          kupnie pifka) aby poszły z Tobą na miasto! Podzielcie się następnie z
+          nami owocami Waszej akcji, a resztę instrukcji już Wam podeślemy!
           <br />
           <br />
           Wspólnie zwalczmy kulturę gwałtu!
@@ -611,6 +612,7 @@ export default function faq() {
           <br />
           Oto istniejące obecnie grupy:
           <br />
+          <br />
           <ul type="none">
             <li>
               <a href="https://www.facebook.com/groups/514364832501689/">
@@ -712,70 +714,67 @@ export default function faq() {
           tutaj
           <br />
           <br />
-          Nie pragniemy nikogo wykluczać z działania, jednak do naszych grup nie
-          przyjmujemy cis-panów z następujących powodów:
+          Dzięki za zainteresowanie PLAKACIARAMI.
+          <br />
+          <br />
+          Super, że chcesz do nas dołączyć i że widzisz potrzebę działania! HELL
+          YEAH!!! PLAKACIARY to samoorganizujący się ruch oddolny, otwarty dla
+          każdej NIEprzemocowej OSOBY, która pragnie plakatować feministyczne,
+          anty-przemocowe, anty-opresyjne hasła i która zgadza się z naszymi
+          wartościami oraz naszym sposobem działania.
+          <br />
+          <br />
+          Wiedz jednak, iż z pewnych powodów, przedstawionymi poniżej, do
+          naszych grup na fejsbuku, nie przyjmujemy CIS-panów. Jest to
+          motywowane następującymi kwestiami:
           <br />
           <br />
           <ol>
             <li>
-              Nasza inicjatywa ma na celu pomóc KOBIETOM zająć oddolnie
-              przestrzeń publiczną, w której doświadczają one na co dzień
+              nasza inicjatywa ma na celu pomóc KOBIETOM zająć oddolnie
+              przestrzeń publiczną, w której doświadczają na co dzień
               opresyjnego traktowania, w tym: obmacywania, ekshibicjonizmu,
-              atakowania i gwałtów. Przestrzeni, w której nie czują się na co
-              dzień bezpiecznie jeśli nie towarzyszy im zaufany mężczyzna.
-              Możliwość ‘przejęcia’ tej przestrzeni bez (wspierającej) męskiej
-              obecności i poczucie się w niej „silną” jest dla nas zasadnicza i
-              uważamy takie doświadczenie za wyzwalające.
+              atakowania i gwałtów. Przestrzeni, w której nie czują się na
+              codzień bezpiecznie jeśli nie towarzyszy im zaufany mężczyzna.
+              Możliwość PRZEJĘCIA tej przestrzeni bez (wspierającej) męskiej
+              obecności i poczucie się w niej SILNĄ i SPRAWCZĄ jest dla nas
+              zasadnicza i uważamy takie doświadczenie za wyzwalające i
+              NIEZBĘDNE do życia dla KAŻDEJ z nas.
             </li>
             <li>
-              Na naszych grupach obecne są ofiary przemocy seksualnej, fizycznej
-              i innej. Obecność cis-mężczyzn może sprawić, że trudniej będzie im
-              się otworzyć. Chcemy również zachować jak największe środki
-              bezpieczeństwa aby zapobiec tzw. „wynosicielstwu”, gdyż temat jest
-              poważna, a niektóre osoby nie wiedzą czasami gdzie postawić
-              granicę do „śmieszkowania”, „tyrania beki” etc.
+              na naszych grupach obecne są ofiary przemocy seksualnej,
+              fizycznej, psychicznej i innej. Obecność mężczyzn może sprawić, że
+              mogą poczuć się one przez nich onieśmielone i trudniej będzie im
+              przez to się otworzyć czy zaangażować. Pragniemy również zachować
+              jak największe środki bezpieczeństwa gdyż temat jest dużego
+              kalibru, a nie wszyscy zostali wyposażeni w minimum inteligencji
+              emocjonalnej niezbędnej do obracania się w takich problematykach.
             </li>
             <li>
-              Jest dla nas ważne, aby feminizm był konstruowany przez kobiety i
-              żeby to ich głos było słychać. Mężczyźni to nasi sojusznicy –
-              zasadniczy i ważny element ruchu – ale tutaj organizujemy się bez
-              Was. Ma to na celu zapobiec reprodukowaniu w feminizmie tych
-              samych schematów opresji, których kobiety doświadczają poza nim.
-            </li>
-            <li>
-              Niemożliwym jest dla nas tak naprawdę sprawdzenia kto RZECZYWIŚCIE
-              kryje się za danym profilem i jakie są jego prawdziwe intencje, a
-              czasami – zdarzyło nam się to kilkukrotnie – niektórzy panowie
-              pragną dołączyć do naszych grup tylko po to, aby je „rozwalać od
-              środka”...
+              ważne jest dla nas, aby feminizm był konstruowany przez kobiety i
+              żeby to ICH głos było słychać. Wyraźnie i GŁOŚNO. Mężczyźni to
+              nasi sojusznicy – zasadniczy i ważny element ruchu – ale ich
+              obecność jest niezbędna w nieco innym wymiarze. Ma to na celu
+              zapobiec reprodukowaniu w feminizmie tych samych schematów
+              opresji, których kobiety doświadczają poza nim. To tyle jeśli
+              chodzi o część teoretyczną i o grupy fesjbuskowe.
             </li>
           </ol>
           <br />
-          Nasze fejsbukowe grupy to nasze "wuefowe szatnie". Jednak to, że nie
-          wpuszczamy do nich CIS-mężczyzn nie oznacza, że następnie nie możemy
-          wspólnie grać w siatkę czy w kosza.
+          Chłopaki TEŻ plakatują - z koleżankami! Albo pomagają nam w
+          organizacji i ogarnianiu ruchu. Ale musimy ich NAJPIERW poznać w REALU
+          aby przekonać się kim są i co sobą reprezentują, bo na fejsie jest to
+          po prostu niemożliwe. Każdy jest tu anonimowy, więc nasze fejsbukowe
+          grupy są dla nas takimi "wuefowymi szatniami". Ale tylko dlatego że
+          nie wpuszczamy do nich CIS-chłopaków nie znaczy, że potem nie możemy
+          razem grać w siatkę czy w kosza, no nie?
           <br />
-          Panowie TEŻ plakatują - z koleżankami na przykład - i w różnoraki inny
-          sposób nam pomagają, np. w organizacji i ogarnianiu ruchu. Ale
-          cis-kolegów musimy NAJPIERW poznać w REALU aby przekonać się KIM są i
-          CO sobą reprezentują, bo na fejsie jest to po prostu niemożliwe, bo
-          każdy jest tu anonimowy. Proponujemy więc wszystkim chętnym kolegom
-          dołączać do plakatujących koleżanek… albo, LEPIEJ, ZACHĘCAĆ obecne w
-          ich życiu kobiety - przyjaciółki, siostry, koleżanki, koleżanki żony,
-          narzeczonej, dziewczyny lub chłopaka, kuzynki, mamy, ciotki i babcie,
-          aby ruszyły z Wami w miasto! A następnie podesłały nam owoce Waszej
-          wspólnej akcji: abyście mogły dostać instrukcje jak do nas dołączyć
-          POZA FEJSEM!
-          <br />
-          <br />W między czasie, zawsze możesz dorzucić się na plakaciarskie
-          materiały: <a href="https://zrzutka.pl/wdy5bp">zrzutka</a>
-          <br />
-          <br />
-          Pamiętaj: nie potrzebujesz naszego błogosławieństwa aby wyjść w miasto
-          i plakatować!
-          <br />
-          <br />
-          Wspólnie zwalczmy kulturę gwałtu!
+          Proponujemy więc dołączyć Ci do plakatujących już koleżanek… albo –
+          LEPIEJ – do ZACHĘCENIA wahających się lub nieśmiałych dziewczyn
+          (przyjaciółek, sióstr, koleżanek, żony, kuzynek, mamy, babci czy też
+          tej super fajnej pani sklepowej co się z nią zaśmiewasz przy każdym
+          kupnie pifka) aby poszły z Tobą na miasto! Podzielcie się następnie z
+          nami owocami Waszej akcji, a resztę instrukcji już Wam podeślemy!
           <h3 id={titles[5]}>
             <li>{titles[5]}</li>
           </h3>
@@ -1327,21 +1326,130 @@ export default function faq() {
           murach). W przeciwieństwie do naszych plakatów.
           <br />
           <br />
-          Więc po pierwsze: spokojnie! Rozluźniamy pośladki i oddychamy!
-          <br />
-          <br />
-          ŻADNA z PLAKACIAR nie pierd*lnęła „Ci” hasła tu czy tam ANI specjalnie
-          ANI na złość. Tak, WIEMY: ciężko może być Ci w to uwierzyć.
+          Więc po pierwsze: spokojnie! Rozluźniamy pośladki i oddychamy! ŻADNA z
+          PLAKACIAR nie pierd*lnęła „Ci” hasła tu czy tam ANI specjalnie ANI na
+          złość. Tak, WIEMY: ciężko może być Ci w to uwierzyć.
           <br />
           <br />
           Wyobraź sobie jednak, że podczas gdy panowie od tysiącleci panoszą się
-          w przestrzeni publicznej, my - kobiety - zaczęłyśmy mieć do niej
-          dostęp dopiero niedawno i... ciągle się jej uczymy! Po raz PIERWSZY w
-          ŻYCIU zajmujemy bowiem dzisiaj przestrzeń publiczną. Przestrzeń, w
-          której na co dzień doświadczamy opresyjnego traktowania, takiego jak:
-          obmacywania, ekshibicjonizmu, atakowania czy gwałtów. Przestrzeń, w
-          której nie czujemy się bezpiecznie jeśli nie towarzyszą nam zaufane
-          nam osoby. Przestrzeń, która nosi znamię, piętno, świadectwo
+          w przestrzeni publicznej, my - kobiety - zaczynamy mieć do niej dostęp
+          dopiero od niedawna... i ciągle się z nią oswajamy! Przestrzeń, w
+          której na co dzień doświadczamy opresyjnego traktowania takiego jak
+          obmacywanie, wgapianie się, wygwizdy, ekshibicjonizm, atakowanie,
+          napady czy gwałty. Przestrzeń, w której nie czujemy się bezpiecznie
+          jeśli nie towarzyszą nam zaufane nam osoby. Przestrzeń, która
+          przesiąknięta BEZPRAWIEM wyrządzanej nam w niej od tysiącleci
+          przemocy, nosi znamię i świadectwo naszych krzywd, bólu, doświadczanej
+          w niej przez nas opresji, przemocy, cierpienia i gwałtów.
+          <br />
+          <br />
+          Czy z tym krótkim wstępem, łatwiej jesteś w stanie sobie wyobrazić, że
+          kiedy wychodzisz po raz pierwszy Graffiti zostało Ci zaklejone?
+          <br />
+          <br />
+          Uważamy bowiem, że "WINA" określa UMYŚLNE spowodowanie szkody (
+          <a href="https://pl.wikipedia.org/wiki/Wina#:~:text=Wina%20%E2%80%93%20okre%C5%9Blony%20w%20przepisach%20prawnych,(nieodzowny%20sk%C5%82adnik%20ka%C5%BCdego%20przest%C4%99pstwa).&text=Prawo%20cywilne%20wyr%C3%B3%C5%BCnia%20win%C4%99%20umy%C5%9Bln%C4%85,przekroczenie%20zakazu%20nieczynienia%20drugiemu%20szkody">
+            definicja
+          </a>
+          ).
+          <br />
+          <br />
+          To tak jak powiedzieć, że jeśli bobas ucząc się chodzić potrąci wazę,
+          to jest to jego wina. Nie do końca - w naszym mniemaniu - ... bo nie
+          zrobił tego UMYŚLNIE.
+          <br />
+          <br />
+          Przypomnijmy więc, że kobiety dopiero od niecałych stu lat, w
+          niektórych miejscach od niecałych 50, a w innych od jeszcze krótszego
+          czasu, cieszą się statutem niezależnych osób fizycznych posiadających
+          - ciągle tylko - CZĘŚĆ praw i obowiązków mężczyzn. Od niedawna
+          przejmują stanowiska zajmowane dotychczas od tysięcy lat przez
+          mężczyzn, od niedawna rządzą co poniektórymi krajami, od niedawna
+          wchodzą w niektóre sektory zawodowe, od niedawna wykonują niektóre
+          zadania itp. To samo jest z przestrzenią publiczną, którą –
+          przypominamy – zająć może KAŻDY: plakaciary, sikacz-pijacz albo
+          kolega-konkurent graficiarz, który by tam potencjalnie mógł i
+          „przysłowiowego” ch@ja-w@ja wysmarować.
+          <br />
+          <br />
+          To panowie dotychczas rządzili przestrzenią publiczną i – śmiemy
+          przypuszczać – roszczą sobie zwyczajnie prawo do opierd@lania nas,
+          żeśmy ŚMIAŁY im dotknąć! Nieważne, że to tylko kartki przyklejone na
+          klajster z mąki. Bośmy NA PEWNO specjalnie te plakaty NA ZŁOŚĆ im tam
+          walnęły. Bo my „oczywiście” DOKŁADNIE ZNAMY savoir-faire uliczny, bo
+          każda z nas od lat WIEKÓW wychodzi i zajmuje przestrzeń publiczną,
+          wiec mamy dużą wprawę, wiemy DOKŁADNIE co, z czym i jak to się je i
+          NIGDY nie popełniamy ŻADNYCH błędów. Pomijamy oprócz tego fakt, że
+          niektóre z plakatów wyklejane są w miejscach, w których DOSZŁO do
+          aktów AGRESJI do których nawiązują nasze hasła.
+          <br />
+          <br />
+          To wszystko jest jednak tak naprawdę nieważne. Można się z nami
+          zgadzać i można się z nami NIE zgadzać. To co JEST WAŻNE, to fakt, że
+          nie ma ŻADNEGO USPRAWIEDLIWIENIA dla PRZEMOCY. Język jakim napisał do
+          nas ten człowiek musi zostać WYPLENIONY. Jest OGROMNE
+          prawdopodobieństwo, że jeśliby nas spotkał na ulicy, to by nam
+          zwyczajnie WYRZĄDZIŁ KRZYWDĘ.
+          <br />
+          <br />
+          To JEST PROBLEM. Nie graffiti i nie plakaty. Po prostu.
+          <br />
+          <br />
+          Przypominamy Więc - PONOWNIE - że rozmawiamy o przestrzeni PUBLICZNEJ
+          (na środku skrzyżowania) którą zająć może KAŻDY: plakaciary,
+          sikacz-pijacz albo kolega-graficiarz, który by Wam tam potencjalnie
+          mógł i „przysłowiowego” ch@ja-w@ja wysmarować.
+          <br />
+          <br />
+          Wbrew pozorom zatem, jeśli miejsce pracy w miejscu publicznym nie
+          zostało zabezpieczone ani choćby oznakowane, to osoba za to
+          odpowiedzialna powinna ponieść konsekwencje swojego zaniedbania
+          zamiast obarczać innych winną za swój błąd.
+          <br />
+          <br />
+          My - wyobraźcie Panowie sobie - RÓWNIEŻ robimy nasze akcje
+          plakaciarskie CHARYTATYWNIE.
+          <br />
+          <br />
+          Wykonujemy ważną pracę edukacyjną, którą POWINNO ŚWIADCZYĆ PAŃSTWO,
+          ale której nie świadczy. Z powodu tych braków programowych, zamiast
+          kraju równości i sprawiedliwości, mamy kraj, w którym kobiety traktuje
+          się protekcjonalnie, lekceważąco, nie na serio i w którym doświadczają
+          one dzień w dzień przemocy fizycznej, emocjonalnej, seksualnej i
+          seksistowskiej. Ale spoks, rozumiemy: koledzy po fachu mają wqrwa.
+          <br />
+          <br />
+          No bo przecież Wy FACECI jesteście i to do Was JEDYNYCH świat
+          należy!!! Rządzicie przestrzenią publiczną!!! Oznaczona czy nie,
+          należy nas opierd@lić żeśmy ŚMIAŁY dotknąć! Ch@j że to tylko kartki
+          przyklejone na klajster z mąki. Bośmy NA PEWNO *specjalnie* te plakaty
+          NA ZŁOŚĆ Wam tam walnęły. Przecież DOKŁADNIE WIEDZIAŁYŚMY, że tam
+          mural ma na Hospicjum dla Kobiet powstać, a my ani nie kobiety ani nie
+          chorujemy! I od LAAAAT, sorry, od WIEKÓW wychodzimy i zajmujemy
+          przestrzeń publiczną, wiec mamy dużą wprawę, wiemy DOKŁADNIE co, z
+          czym i jak to się je i NIGDY nie popełniamy ŻADNYCH błędów.
+          <br />
+          <br />
+          No po prostu włosy z głowy sobie rwiemy! Co robić? Czy mamy stawiać
+          się do siedziby Waszej firmy, by się zgłaszać po wpierdol? Oczywiście
+          na szczęście - dzięki Waszemu charytatywnemu muralowi - będziemy
+          wiedziały, którędy do hospicjum, wiec rozwiąże to WSZYSTKIE nasze
+          problemy!
+          <br />
+          Więc zamiast rzucać się, ze Wam dziewczyny przykleiły kilka kartek na
+          mur, zastanówcie się PO CO angażujecie się charytatywnie w projekt,
+          jeżeli NIJAK ma się on do tego co reprezentujecie SOBĄ, swoim sposobem
+          komunikacji (agresywny, pobłażliwy, protekcjonalny, lekceważący...).
+          <br />
+          Bo z tego co MY tu poczytałyśmy sobie, to pachnie nam tu trickiem
+          magickiem PRu na „czyste sumienie”...
+          <br />
+          <br />
+          PS.
+          <br />
+          Żeby zadość uczynić za trud usunięcia naszych plakatów, podsuwamy
+          gratisowo rozwiązanie umożliwiające zabezpieczenie terenu pracy (bo
+          nie byliście w stanie sobie go wyobrazić)
           <h3 id={titles[16]}>
             <li>{titles[16]}</li>
           </h3>
