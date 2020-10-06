@@ -1,5 +1,5 @@
 import grupy from "./grupy.png";
-import fejs_wspieranie from "./fejs_wspieranie.png";
+import sponsor from "./sponsor.jpg";
 import plakat_historia from "./plakat_historia.png";
 import zasiegi from "./zasiegi.png";
 import pomoc_kobieta1 from "./pomoc_kobieta1.jpg";
@@ -9,7 +9,7 @@ import pomoc_dom1 from "./pomoc_dom1.jpg";
 
 export {
   grupy,
-  fejs_wspieranie,
+  sponsor,
   plakat_historia,
   zasiegi,
   pomoc_kobieta1,

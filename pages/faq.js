@@ -6,7 +6,7 @@ import { RiHome4Line } from "react-icons/ri";
 import { FaArrowUp } from "react-icons/fa";
 import {
   grupy,
-  fejs_wspieranie,
+  sponsor,
   plakat_historia,
   zasiegi,
   pomoc_kobieta1,
@@ -48,13 +48,16 @@ const Layout = styled.div`
 
   .pomoc {
     width: 33%;
+    height: auto;
 
     @media screen and (max-width: 992px) {
       width: 48%;
+      height: auto;
     }
 
     @media screen and (max-width: 600px) {
       width: 48%;
+      height: auto;
     }
   }
 `;
@@ -864,7 +867,7 @@ export default function faq() {
           <br />
           <br />
           <Center>
-            <img className="wspieranie" src={fejs_wspieranie} />
+            <img className="wspieranie" src={sponsor} />
           </Center>
           <br />
           <br />
