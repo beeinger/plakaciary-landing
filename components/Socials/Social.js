@@ -4,7 +4,7 @@ import { RiSnapchatLine } from "react-icons/ri";
 import styled from "styled-components";
 
 function _Social({ variant, link, size, className }) {
-  const default_size = "56px";
+  const default_size = "48px";
   const variants = {
     twitter: <FiTwitter size={size || default_size} />,
     instagram: <FiInstagram size={size || default_size} />,

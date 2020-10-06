@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import ImageText from "../components/ImageText";
+import Router from "next/router";
+import { RiHome4Line } from "react-icons/ri";
+import { FaArrowUp } from "react-icons/fa";
 import {
   grupy,
   fejs_wspieranie,
@@ -14,6 +17,13 @@ import {
 
 const Layout = styled.div`
   margin: 5vh 15vw 0 15vw;
+
+  > svg {
+    cursor: pointer;
+    position: fixed;
+    left: 5vw;
+    bottom: 5vh;
+  }
 
   @media screen and (max-width: 992px) {
     margin: 5vh 8vw 0 6vw;
@@ -54,6 +64,23 @@ const Title = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 32px;
+
+  > svg {
+    position: absolute;
+    cursor: pointer;
+    right: 20vw;
+    top: 5vh;
+
+    @media screen and (max-width: 992px) {
+      right: 8px;
+      top: 8px;
+    }
+
+    @media screen and (max-width: 600px) {
+      right: 8px;
+      top: 8px;
+    }
+  }
 `;
 
 const Body = styled.div`
@@ -87,6 +114,21 @@ const Red = styled.b`
 
 const PointerH3 = styled.h3`
   cursor: pointer;
+
+  width: fit-content;
+
+  margin-block-start: 0.33em;
+  margin-block-end: 0.33em;
+
+  box-sizing: border-box;
+  border-bottom: 1px solid white;
+
+  transition: all 200ms ease;
+
+  :hover {
+    color: dimgrey;
+    border-bottom: 1px solid dimgrey;
+  }
 `;
 
 export default function faq() {
@@ -112,7 +154,12 @@ export default function faq() {
   ];
   return (
     <Layout>
+      <FaArrowUp
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        size="3em"
+      />
       <Title>
+        <RiHome4Line onClick={() => Router.push("/")} size="4em" />
         <ImageText size="9em">FAQ</ImageText>
         <ImageText size="3em">W TRAKCIE</ImageText>
         <ImageText size="3em">PRACY</ImageText>
@@ -122,13 +169,18 @@ export default function faq() {
         <br />
         <ol>
           {titles.map((val, idx) => {
-            const href = "#" + val;
             return (
               <>
                 <PointerH3 key={idx}>
-                  <a href={href}>
-                    <li href={href}>{val}</li>
-                  </a>
+                  <li
+                    onClick={() =>
+                      document.getElementById(val).scrollIntoView({
+                        behavior: "smooth",
+                      })
+                    }
+                  >
+                    {val}
+                  </li>
                 </PointerH3>
                 <br />
               </>
