@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import ImageText from "../components/ImageText";
 import Router from "next/router";
-import { RiHome4Line } from "react-icons/ri";
-import { FaArrowUp } from "react-icons/fa";
 import {
   grupy,
   sponsor,
@@ -13,12 +11,14 @@ import {
   pomoc_lgbt1,
   pomoc_kryzys1,
   pomoc_dom1,
+  home,
+  arrowUp,
 } from "../resources/images";
 
 const Layout = styled.div`
   margin: 5vh 15vw 0 15vw;
 
-  > svg {
+  .backArrow {
     cursor: pointer;
     position: fixed;
     left: 5vw;
@@ -68,7 +68,7 @@ const Title = styled.div`
   align-items: center;
   margin-bottom: 32px;
 
-  > svg {
+  > img {
     position: absolute;
     cursor: pointer;
     right: 20vw;
@@ -155,14 +155,39 @@ export default function faq() {
     "A niech was ©∞&$!#%@?¥§¿!!!",
     "Coś innego (zaskoczcie nas!)",
   ];
+
+  const [FirstHY, setFirstHY] = useState(null);
+
+  function scroll() {
+    setFirstHY(
+      document
+        .getElementById("Czy można się do Was jakoś dołączyć?")
+        .getBoundingClientRect().y
+    );
+  }
+
+  useEffect(() => {
+    function watchScroll() {
+      window.addEventListener("scroll", scroll);
+    }
+    watchScroll();
+    return () => {
+      window.removeEventListener("scroll", scroll);
+    };
+  });
+
   return (
     <Layout>
-      <FaArrowUp
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        size="3em"
-      />
+      {FirstHY <= 2 && (
+        <img
+          className="backArrow"
+          src={arrowUp}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          height="8%"
+        />
+      )}
       <Title>
-        <RiHome4Line onClick={() => Router.push("/")} size="4em" />
+        <img src={home} onClick={() => Router.push("/")} height="8%" />
         <ImageText size="9em">FAQ</ImageText>
         <ImageText size="3em">W TRAKCIE</ImageText>
         <ImageText size="3em">PRACY</ImageText>
