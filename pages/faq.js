@@ -2,19 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import ImageText from "../components/ImageText";
 import Router from "next/router";
-import Image from "../components/Image";
-import {
-  grupy,
-  sponsor,
-  plakat_historia,
-  zasiegi,
-  pomoc_kobieta1,
-  pomoc_lgbt1,
-  pomoc_kryzys1,
-  pomoc_dom1,
-  home,
-  arrowUp,
-} from "../images";
+import Image from "next/image";
 
 const Layout = styled.div`
   margin: 5vh 15vw 0 15vw;
@@ -35,21 +23,6 @@ const Layout = styled.div`
     font-size: 0.7em;
     margin: 5vh 8vw 0 6vw;
   }
-
-  .pomoc {
-    width: 33%;
-    height: auto;
-
-    @media screen and (max-width: 992px) {
-      width: 48%;
-      height: auto;
-    }
-
-    @media screen and (max-width: 600px) {
-      width: 48%;
-      height: auto;
-    }
-  }
 `;
 
 const Title = styled.div`
@@ -58,7 +31,7 @@ const Title = styled.div`
   align-items: center;
   margin-bottom: 32px;
 
-  > img {
+  .home {
     position: absolute;
     cursor: pointer;
     right: 20vw;
@@ -81,26 +54,30 @@ const Body = styled.div`
   font-family: "Roboto", sans-serif;
 `;
 
-const Center = styled.div`
-  display: flex;
-  width: 100%;
-  height: auto;
-  justify-content: center;
-`;
+const HelpContainer = styled.div`
+  display: grid;
+  grid-template:
+    "kryzys lgbt" auto
+    "dom kobieta" auto
+    / auto auto;
+  gap: 24px 16px;
 
-const SpaceAround = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-
-  @media screen and (max-width: 992px) {
-    justify-content: space-between;
+  .kryzys {
+    grid-area: kryzys;
   }
 
-  @media screen and (max-width: 600px) {
-    justify-content: space-between;
+  .lgbt {
+    grid-area: lgbt;
   }
-`;
+
+  .dom {
+    grid-area: dom;
+  }
+
+  .kobieta {
+    grid-area: kobieta;
+  }
+`
 
 const Red = styled.b`
   color: red;
@@ -167,19 +144,14 @@ export default function faq() {
   return (
     <Layout>
       {FirstHY <= 2 && (
-        <Image 
+        <img
           className="backArrow"
-          src={arrowUp}
+          src={require(`images/back_up.png?webp`)}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-<<<<<<< HEAD
-=======
-          height="8%"
-          alt="UP"
->>>>>>> master
         />
       )}
       <Title>
-        <img src={home} onClick={() => Router.push("/")} height="8%" />
+        <img className="home" src={require(`images/Home.png?webp`)} onClick={() => Router.push("/")} height="8%" />
         <ImageText size="9em">FAQ</ImageText>
         <ImageText size="3em">W TRAKCIE</ImageText>
         <ImageText size="3em">PRACY</ImageText>
@@ -493,7 +465,7 @@ export default function faq() {
           znajdziesz w zakładce GRUPY na naszym fan peju:
           <br />
           <br />
-          <img src={grupy} />
+          <Image src={require(`images/grupy.png?webp`)} width={658} height={550} />
           <br />
           <br />
           Oto istniejące obecnie grupy:
@@ -679,7 +651,7 @@ export default function faq() {
           peju:
           <br />
           <br />
-          <img src={grupy} />
+          <Image src={require(`images/grupy.png?webp`)} width={658} height={550} />
           <br />
           <br />
           Oto istniejące obecnie grupy:
@@ -883,9 +855,7 @@ export default function faq() {
           z napisem: "ONI NAS WSPIERAJĄ @TAG":
           <br />
           <br />
-          <Center>
-            <img className="wspieranie" src={sponsor} width="100%" height="auto" />
-          </Center>
+          <Image src={require(`images/sponsor.jpg?webp`)} width={728} height={858} />
           <br />
           <br />
           Zamieszczony powyżej przykład opublikowany został na samym początku
@@ -901,18 +871,14 @@ export default function faq() {
           plakat-historia:
           <br />
           <br />
-          <Center>
-            <img src={plakat_historia} width="100%" height="auto" />
-          </Center>
+          <Image src={require(`images/plakat_historia.png?webp`)} width={684} height={423} />
           <br />
           <br />
           W przeciągu zaledwie pięciu dni osiągnął on zasięg, który przerósł
           nasze najśmielsze oczekiwania:
           <br />
           <br />
-          <Center>
-            <img src={zasiegi} width="100%" height="auto" />
-          </Center>
+          <Image src={require(`images/zasiegi.png?webp`)} width={678} height={155} />
           <br />
           <br />
           Tak więc, DOBRY wybór hasła to PODSTAWA sukcesu!
@@ -1369,16 +1335,12 @@ export default function faq() {
           dyspozycji również mejle. Musisz popróbować - do skutku!
           <br />
           <br />
-          <SpaceAround>
-            <img className="pomoc" src={pomoc_kryzys1} />
-            <img className="pomoc" src={pomoc_lgbt1} />
-          </SpaceAround>
-          <br />
-          <br />
-          <SpaceAround>
-            <img className="pomoc" src={pomoc_dom1} />
-            <img className="pomoc" src={pomoc_kobieta1} />
-          </SpaceAround>
+          <HelpContainer>
+            <Image className="kryzys" src={require(`images/pomoc_kryzys1.jpg?webp`)} width={560} height={960} />
+            <Image className="lgbt" src={require(`images/pomoc_lgbt1.jpg?webp`)} width={560} height={960} />
+            <Image className="dom" src={require(`images/pomoc_dom1.jpg?webp`)} width={560} height={960} />
+            <Image className="kobieta" src={require(`images/pomoc_kobieta1.jpg?webp`)} width={560} height={960} />
+          </HelpContainer>
           <h3 id={titles[15]}>
             <li>{titles[15]}</li>
           </h3>

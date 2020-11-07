@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { default as NextImage } from "next/image";
 
-function _Image({ src, alt, className }) {
+function _Image({ src, alt, className, onClick }) {
   var trace;
   var webp;
   try {
@@ -13,9 +13,9 @@ function _Image({ src, alt, className }) {
     webp = require(`images/alphabet/question_mark.png?webp`);
   }
   return (
-    <div className={className}>
+    <div className={className} onClick={onClick}>
       <img className="img" src={trace} />
-      <NextImage className="img" alt={alt} src={webp} layout="fill" />
+      <img className="img" alt={alt} src={webp} />
     </div>
   );
 }

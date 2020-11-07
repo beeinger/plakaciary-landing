@@ -22,7 +22,7 @@ const Layout = styled.div`
         grid-area: input;
     }
 
-    >button {
+    >button { 
         grid-area: button;
     }
 
