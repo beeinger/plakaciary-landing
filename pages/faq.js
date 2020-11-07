@@ -181,6 +181,7 @@ export default function faq() {
           src={arrowUp}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           height="8%"
+          alt="UP"
         />
       )}
       <Title>
