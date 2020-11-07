@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { default as NextImage } from "next/image";
 
 function _Image({ src, alt, className, onClick }) {
   var trace;
@@ -13,9 +12,9 @@ function _Image({ src, alt, className, onClick }) {
     webp = require(`images/alphabet/question_mark.png?webp`);
   }
   return (
-    <div className={className} onClick={onClick}>
-      <img className="img" src={trace} />
-      <img className="img" alt={alt} src={webp} />
+    <div className={className}>
+      <img src={trace} />
+      <img alt={alt} src={webp} />
     </div>
   );
 }
@@ -23,7 +22,7 @@ function _Image({ src, alt, className, onClick }) {
 const Image = styled(_Image)`
   position: relative;
 
-  > .img {
+  > img {
     position: absolute;
     top: 0;
     left: 0;
