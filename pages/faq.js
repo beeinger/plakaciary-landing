@@ -13,7 +13,7 @@ import {
   pomoc_dom1,
   home,
   arrowUp,
-} from "../resources/images";
+} from "../images";
 
 const Layout = styled.div`
   margin: 5vh 15vw 0 15vw;
