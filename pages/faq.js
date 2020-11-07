@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import ImageText from "../components/ImageText";
 import Router from "next/router";
+import Image from "next/image";
 import {
   grupy,
   sponsor,
@@ -32,18 +33,6 @@ const Layout = styled.div`
   @media screen and (max-width: 600px) {
     font-size: 0.7em;
     margin: 5vh 8vw 0 6vw;
-  }
-
-  .wspieranie {
-    width: 70%;
-
-    @media screen and (max-width: 992px) {
-      width: 100%;
-    }
-
-    @media screen and (max-width: 600px) {
-      width: 100%;
-    }
   }
 
   .pomoc {
@@ -94,6 +83,7 @@ const Body = styled.div`
 const Center = styled.div`
   display: flex;
   width: 100%;
+  height: auto;
   justify-content: center;
 `;
 
@@ -156,7 +146,7 @@ export default function faq() {
     "Coś innego (zaskoczcie nas!)",
   ];
 
-  const [FirstHY, setFirstHY] = useState(null);
+  const [FirstHY, setFirstHY] = useState(3);
 
   function scroll() {
     setFirstHY(
@@ -501,7 +491,7 @@ export default function faq() {
           znajdziesz w zakładce GRUPY na naszym fan peju:
           <br />
           <br />
-          <img src={grupy} width="100%" height="auto" />
+          <Image src={grupy} quality={100} width={1000} height={835.84} />
           <br />
           <br />
           Oto istniejące obecnie grupy:
@@ -687,7 +677,7 @@ export default function faq() {
           peju:
           <br />
           <br />
-          <img src={grupy} width="100%" height="auto" />
+          <Image src={grupy} quality={100} width={1000} height={835.84} />
           <br />
           <br />
           Oto istniejące obecnie grupy:
@@ -892,7 +882,7 @@ export default function faq() {
           <br />
           <br />
           <Center>
-            <img className="wspieranie" src={sponsor} />
+            <img className="wspieranie" src={sponsor} width="100%" height="auto" />
           </Center>
           <br />
           <br />
