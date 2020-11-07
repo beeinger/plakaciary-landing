@@ -156,7 +156,7 @@ export default function faq() {
     "Coś innego (zaskoczcie nas!)",
   ];
 
-  const [FirstHY, setFirstHY] = useState(null);
+  const [FirstHY, setFirstHY] = useState(3);
 
   function scroll() {
     setFirstHY(
@@ -167,10 +167,7 @@ export default function faq() {
   }
 
   useEffect(() => {
-    function watchScroll() {
-      window.addEventListener("scroll", scroll);
-    }
-    watchScroll();
+    window.addEventListener("scroll", scroll);
     return () => {
       window.removeEventListener("scroll", scroll);
     };
