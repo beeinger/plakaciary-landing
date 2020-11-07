@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import ImageText from "../components/ImageText";
 import Router from "next/router";
-import Image from "next/image";
+import Image from "../components/Image";
 import {
   grupy,
   sponsor,
@@ -20,6 +20,7 @@ const Layout = styled.div`
   margin: 5vh 15vw 0 15vw;
 
   .backArrow {
+    height: 8%;
     cursor: pointer;
     position: fixed;
     left: 5vw;
@@ -169,11 +170,10 @@ export default function faq() {
   return (
     <Layout>
       {FirstHY <= 2 && (
-        <img
+        <Image 
           className="backArrow"
           src={arrowUp}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          height="8%"
         />
       )}
       <Title>
@@ -491,7 +491,7 @@ export default function faq() {
           znajdziesz w zakładce GRUPY na naszym fan peju:
           <br />
           <br />
-          <Image src={grupy} quality={100} width={1000} height={835.84} />
+          <img src={grupy} />
           <br />
           <br />
           Oto istniejące obecnie grupy:
@@ -677,7 +677,7 @@ export default function faq() {
           peju:
           <br />
           <br />
-          <Image src={grupy} quality={100} width={1000} height={835.84} />
+          <img src={grupy} />
           <br />
           <br />
           Oto istniejące obecnie grupy:
