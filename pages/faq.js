@@ -14,7 +14,7 @@ import {
   pomoc_dom1,
   home,
   arrowUp,
-} from "../resources/images";
+} from "../images";
 
 const Layout = styled.div`
   margin: 5vh 15vw 0 15vw;
@@ -158,10 +158,7 @@ export default function faq() {
   }
 
   useEffect(() => {
-    function watchScroll() {
-      window.addEventListener("scroll", scroll);
-    }
-    watchScroll();
+    window.addEventListener("scroll", scroll);
     return () => {
       window.removeEventListener("scroll", scroll);
     };
@@ -174,6 +171,11 @@ export default function faq() {
           className="backArrow"
           src={arrowUp}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+<<<<<<< HEAD
+=======
+          height="8%"
+          alt="UP"
+>>>>>>> master
         />
       )}
       <Title>
