@@ -77,7 +77,7 @@ const HelpContainer = styled.div`
   .kobieta {
     grid-area: kobieta;
   }
-`
+`;
 
 const Red = styled.b`
   color: red;
@@ -123,15 +123,28 @@ export default function faq() {
     "A niech was ©∞&$!#%@?¥§¿!!!",
     "Coś innego (zaskoczcie nas!)",
   ];
-
-  const [FirstHY, setFirstHY] = useState(3);
+  const [Show, setShow] = useState(false);
+  const [Ys, setYs] = useState([]);
+  const [CurrentId, setCurrentId] = useState(undefined);
+  const [MaxY, setMaxY] = useState(undefined);
 
   function scroll() {
-    setFirstHY(
-      document
-        .getElementById("Czy można się do Was jakoś dołączyć?")
-        .getBoundingClientRect().y
-    );
+    if (window.pageYOffset > MaxY && CurrentId) {
+      Router.push("#" + CurrentId);
+    } else {
+      var i;
+      for (i = 0; i < Ys.length; i++) {
+        if (Ys[i] < window.pageYOffset && window.pageYOffset < Ys[i + 1]) {
+          setShow(true);
+          Router.push("#" + titles[i]);
+          break;
+        } else if (window.pageYOffset < Ys[0]) {
+          setShow(false);
+          Router.push("/faq");
+          break;
+        }
+      }
+    }
   }
 
   useEffect(() => {
@@ -141,17 +154,37 @@ export default function faq() {
     };
   });
 
+  useEffect(() => {
+    setMaxY(document.body.clientHeight - window.innerHeight - 5);
+    var i;
+    for (i = 0; i < titles.length; i++) {
+      const distance = document
+        .getElementById(titles[i])
+        .getBoundingClientRect().y;
+      const y = Math.floor(window.pageYOffset + distance);
+      setYs((oldArray) => [...oldArray, y]);
+    }
+  }, []);
+
   return (
     <Layout>
-      {FirstHY <= 2 && (
+      {Show && (
         <img
           className="backArrow"
           src={require(`images/back_up.png?webp`)}
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => {
+            Router.push("/faq");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
         />
       )}
       <Title>
-        <img className="home" src={require(`images/Home.png?webp`)} onClick={() => Router.push("/")} height="8%" />
+        <img
+          className="home"
+          src={require(`images/Home.png?webp`)}
+          onClick={() => Router.push("/")}
+          height="8%"
+        />
         <ImageText size="9em">FAQ</ImageText>
         <ImageText size="3em">W TRAKCIE</ImageText>
         <ImageText size="3em">PRACY</ImageText>
@@ -165,11 +198,13 @@ export default function faq() {
               <>
                 <PointerH3 key={idx}>
                   <li
-                    onClick={() =>
+                    onClick={() => {
+                      Router.push("#" + val);
+                      setCurrentId(val);
                       document.getElementById(val).scrollIntoView({
                         behavior: "smooth",
-                      })
-                    }
+                      });
+                    }}
                   >
                     {val}
                   </li>
@@ -194,7 +229,9 @@ export default function faq() {
             <li>wspierając ruch organizacyjno-administracyjnie</li>
             <li>
               pomagając nam finansowo:{" "}
-              <a href="https://zrzutka.pl/wdy5bp">zrzutka</a>
+              <a target="_blank" href="https://zrzutka.pl/wdy5bp">
+                zrzutka
+              </a>
             </li>
             <li>
               odstępując nam mury lub witryny którymi zarządzasz lub posiadasz
@@ -465,7 +502,11 @@ export default function faq() {
           znajdziesz w zakładce GRUPY na naszym fan peju:
           <br />
           <br />
-          <Image src={require(`images/grupy.png?webp`)} width={658} height={550} />
+          <Image
+            src={require(`images/grupy.png?webp`)}
+            width={658}
+            height={550}
+          />
           <br />
           <br />
           Oto istniejące obecnie grupy:
@@ -473,87 +514,138 @@ export default function faq() {
           <br />
           <ul type="none">
             <li>
-              <a href="https://www.facebook.com/groups/514364832501689/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/514364832501689/"
+              >
                 GŁÓWNA
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/3007416046037370/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/3007416046037370/"
+              >
                 BIAŁYSTOK
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/325704052142275/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/325704052142275/"
+              >
                 BYDGOSZCZ
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/475746909807420/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/475746909807420/"
+              >
                 GDAŃSK
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/396313641355103/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/396313641355103/"
+              >
                 GDYNIA
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/725898911309859/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/725898911309859/"
+              >
                 KATOWICE
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/306427564053769/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/306427564053769/"
+              >
                 ŁÓDŹ
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/1151844395173413/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/1151844395173413/"
+              >
                 PŁOCK
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/1168242550192721/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/1168242550192721/"
+              >
                 POZNAŃ
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/3112062832353559/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/3112062832353559/"
+              >
                 RADOM
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/326412045067526/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/326412045067526/"
+              >
                 SIERADZ
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/739830603247569/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/739830603247569/"
+              >
                 SZCZECIN
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/1645432458954212/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/1645432458954212/"
+              >
                 SUWAŁKI
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/591017498450521/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/591017498450521/"
+              >
                 TORUŃ
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/651314545801553/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/651314545801553/"
+              >
                 WARSZAWA
               </a>
             </li>
             <li>
-              <a href=" https://www.facebook.com/groups/633115283990140/">
+              <a
+                target="_blank"
+                href=" https://www.facebook.com/groups/633115283990140/"
+              >
                 WROCŁAW
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/3572321602787471/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/3572321602787471/"
+              >
                 ZABRZE
               </a>
             </li>
@@ -651,7 +743,11 @@ export default function faq() {
           peju:
           <br />
           <br />
-          <Image src={require(`images/grupy.png?webp`)} width={658} height={550} />
+          <Image
+            src={require(`images/grupy.png?webp`)}
+            width={658}
+            height={550}
+          />
           <br />
           <br />
           Oto istniejące obecnie grupy:
@@ -659,87 +755,138 @@ export default function faq() {
           <br />
           <ul type="none">
             <li>
-              <a href="https://www.facebook.com/groups/514364832501689/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/514364832501689/"
+              >
                 GŁÓWNA
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/3007416046037370/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/3007416046037370/"
+              >
                 BIAŁYSTOK
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/325704052142275/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/325704052142275/"
+              >
                 BYDGOSZCZ
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/475746909807420/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/475746909807420/"
+              >
                 GDAŃSK
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/396313641355103/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/396313641355103/"
+              >
                 GDYNIA
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/725898911309859/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/725898911309859/"
+              >
                 KATOWICE
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/306427564053769/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/306427564053769/"
+              >
                 ŁÓDŹ
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/1151844395173413/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/1151844395173413/"
+              >
                 PŁOCK
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/1168242550192721/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/1168242550192721/"
+              >
                 POZNAŃ
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/3112062832353559/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/3112062832353559/"
+              >
                 RADOM
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/326412045067526/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/326412045067526/"
+              >
                 SIERADZ
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/739830603247569/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/739830603247569/"
+              >
                 SZCZECIN
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/1645432458954212/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/1645432458954212/"
+              >
                 SUWAŁKI
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/591017498450521/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/591017498450521/"
+              >
                 TORUŃ
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/651314545801553/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/651314545801553/"
+              >
                 WARSZAWA
               </a>
             </li>
             <li>
-              <a href=" https://www.facebook.com/groups/633115283990140/">
+              <a
+                target="_blank"
+                href=" https://www.facebook.com/groups/633115283990140/"
+              >
                 WROCŁAW
               </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/groups/3572321602787471/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/3572321602787471/"
+              >
                 ZABRZE
               </a>
             </li>
@@ -834,7 +981,10 @@ export default function faq() {
           <br />
           <br />
           Proponujemy wybranie hasła z listy{" "}
-          <a href="https://drive.google.com/file/d/1pDy7BPWXHF9-bWy_vYkalzj_MLwntc1F/view?usp=sharing">
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1pDy7BPWXHF9-bWy_vYkalzj_MLwntc1F/view?usp=sharing"
+          >
             haseł już ułożonych
           </a>{" "}
           ale można też zaproponować swoje własne.
@@ -855,7 +1005,11 @@ export default function faq() {
           z napisem: "ONI NAS WSPIERAJĄ @TAG":
           <br />
           <br />
-          <Image src={require(`images/sponsor.jpg?webp`)} width={728} height={858} />
+          <Image
+            src={require(`images/sponsor.jpg?webp`)}
+            width={728}
+            height={858}
+          />
           <br />
           <br />
           Zamieszczony powyżej przykład opublikowany został na samym początku
@@ -871,14 +1025,22 @@ export default function faq() {
           plakat-historia:
           <br />
           <br />
-          <Image src={require(`images/plakat_historia.png?webp`)} width={684} height={423} />
+          <Image
+            src={require(`images/plakat_historia.png?webp`)}
+            width={684}
+            height={423}
+          />
           <br />
           <br />
           W przeciągu zaledwie pięciu dni osiągnął on zasięg, który przerósł
           nasze najśmielsze oczekiwania:
           <br />
           <br />
-          <Image src={require(`images/zasiegi.png?webp`)} width={678} height={155} />
+          <Image
+            src={require(`images/zasiegi.png?webp`)}
+            width={678}
+            height={155}
+          />
           <br />
           <br />
           Tak więc, DOBRY wybór hasła to PODSTAWA sukcesu!
@@ -1001,8 +1163,10 @@ export default function faq() {
           <br />
           <br />
           <u>Po trzecie</u>: ściągnij.cie{" "}
-          <a href="https://discord.com">DISCORDA</a>* i zapodaj.cie loginem
-          żebyśmy mogły się z Tobą.Wami skontakować
+          <a target="_blank" href="https://discord.com">
+            DISCORDA
+          </a>
+          * i zapodaj.cie loginem żebyśmy mogły się z Tobą.Wami skontakować
           <br />
           <br />
           <b>*DISCORD</b> – internetowy komunikator podobny do WhatsAppa,
@@ -1227,13 +1391,19 @@ export default function faq() {
           nasz ruch:
           <ul>
             <li>
-              <a href="https://www.v-mag.pl/nie-jestes-sama-sobie-winna">
+              <a
+                target="_blank"
+                href="https://www.v-mag.pl/nie-jestes-sama-sobie-winna"
+              >
                 v mag
               </a>{" "}
               - opublikowany 14/03/2020
             </li>
             <li>
-              <a href="https://www.newsweek.pl/polska/spoleczenstwo/wykrzycz-swoj-gniew-i-bol-na-murze-kim-sa-plakaciary-przeciwko-przemocy-wobec-kobiet/4sj08ch">
+              <a
+                target="_blank"
+                href="https://www.newsweek.pl/polska/spoleczenstwo/wykrzycz-swoj-gniew-i-bol-na-murze-kim-sa-plakaciary-przeciwko-przemocy-wobec-kobiet/4sj08ch"
+              >
                 Newsweek
               </a>{" "}
               - opublikowany 13/09/2020
@@ -1246,7 +1416,10 @@ export default function faq() {
           <br />
           Zdjęcia w oryginalnej rozdzielczości dostępne są do ściągnięcia z
           naszego google{" "}
-          <a href="https://drive.google.com/drive/folders/1pto7xUjXqo3Ql4xnWM026694hDFmBvWK?usp=sharing">
+          <a
+            target="_blank"
+            href="https://drive.google.com/drive/folders/1pto7xUjXqo3Ql4xnWM026694hDFmBvWK?usp=sharing"
+          >
             drajwa
           </a>
           . Pliki posegregowane są w folderach według dat publikacji na naszym
@@ -1321,7 +1494,10 @@ export default function faq() {
           </ul>
           <br />
           Więcej informacji znajdziesz pod{" "}
-          <a href="https://www.gov.pl/web/numer-alarmowy-112/co-zglaszac">
+          <a
+            target="_blank"
+            href="https://www.gov.pl/web/numer-alarmowy-112/co-zglaszac"
+          >
             tym
           </a>{" "}
           adresem.
@@ -1336,10 +1512,30 @@ export default function faq() {
           <br />
           <br />
           <HelpContainer>
-            <Image className="kryzys" src={require(`images/pomoc_kryzys1.jpg?webp`)} width={560} height={960} />
-            <Image className="lgbt" src={require(`images/pomoc_lgbt1.jpg?webp`)} width={560} height={960} />
-            <Image className="dom" src={require(`images/pomoc_dom1.jpg?webp`)} width={560} height={960} />
-            <Image className="kobieta" src={require(`images/pomoc_kobieta1.jpg?webp`)} width={560} height={960} />
+            <Image
+              className="kryzys"
+              src={require(`images/pomoc_kryzys1.jpg?webp`)}
+              width={560}
+              height={960}
+            />
+            <Image
+              className="lgbt"
+              src={require(`images/pomoc_lgbt1.jpg?webp`)}
+              width={560}
+              height={960}
+            />
+            <Image
+              className="dom"
+              src={require(`images/pomoc_dom1.jpg?webp`)}
+              width={560}
+              height={960}
+            />
+            <Image
+              className="kobieta"
+              src={require(`images/pomoc_kobieta1.jpg?webp`)}
+              width={560}
+              height={960}
+            />
           </HelpContainer>
           <h3 id={titles[15]}>
             <li>{titles[15]}</li>
@@ -1382,7 +1578,10 @@ export default function faq() {
           <br />
           <br />
           Uważamy bowiem, że "WINA" określa UMYŚLNE spowodowanie szkody (
-          <a href="https://pl.wikipedia.org/wiki/Wina#:~:text=Wina%20%E2%80%93%20okre%C5%9Blony%20w%20przepisach%20prawnych,(nieodzowny%20sk%C5%82adnik%20ka%C5%BCdego%20przest%C4%99pstwa).&text=Prawo%20cywilne%20wyr%C3%B3%C5%BCnia%20win%C4%99%20umy%C5%9Bln%C4%85,przekroczenie%20zakazu%20nieczynienia%20drugiemu%20szkody">
+          <a
+            target="_blank"
+            href="https://pl.wikipedia.org/wiki/Wina#:~:text=Wina%20%E2%80%93%20okre%C5%9Blony%20w%20przepisach%20prawnych,(nieodzowny%20sk%C5%82adnik%20ka%C5%BCdego%20przest%C4%99pstwa).&text=Prawo%20cywilne%20wyr%C3%B3%C5%BCnia%20win%C4%99%20umy%C5%9Bln%C4%85,przekroczenie%20zakazu%20nieczynienia%20drugiemu%20szkody"
+          >
             definicja
           </a>
           ).
