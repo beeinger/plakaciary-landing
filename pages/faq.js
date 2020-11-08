@@ -129,8 +129,8 @@ export default function faq() {
   const [MaxY, setMaxY] = useState(undefined);
 
   function scroll() {
-    if (window.pageYOffset > MaxY && CurrentId) {
-      Router.push("#" + CurrentId);
+    if (window.pageYOffset > MaxY && (CurrentId == 16 || CurrentId == 17)) {
+      Router.push("#" + titles[CurrentId]);
     } else {
       var i;
       for (i = 0; i < Ys.length; i++) {
@@ -155,13 +155,13 @@ export default function faq() {
   });
 
   useEffect(() => {
-    setMaxY(document.body.clientHeight - window.innerHeight - 5);
+    setMaxY(document.body.clientHeight - window.innerHeight);
     var i;
     for (i = 0; i < titles.length; i++) {
       const distance = document
         .getElementById(titles[i])
         .getBoundingClientRect().y;
-      const y = Math.floor(window.pageYOffset + distance);
+      const y = Math.floor(window.pageYOffset + distance - 1);
       setYs((oldArray) => [...oldArray, y]);
     }
   }, []);
@@ -200,7 +200,7 @@ export default function faq() {
                   <li
                     onClick={() => {
                       Router.push("#" + val);
-                      setCurrentId(val);
+                      setCurrentId(idx);
                       document.getElementById(val).scrollIntoView({
                         behavior: "smooth",
                       });
