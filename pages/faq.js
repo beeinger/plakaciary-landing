@@ -164,6 +164,9 @@ export default function faq() {
       const y = Math.floor(window.pageYOffset + distance - 1);
       setYs((oldArray) => [...oldArray, y]);
     }
+    if (window.pageYOffset > Ys[0]) {
+      setShow(true);
+    }
   }, []);
 
   return (
