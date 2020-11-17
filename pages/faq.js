@@ -125,22 +125,29 @@ export default function faq() {
   ];
   const [Show, setShow] = useState(false);
   const [Ys, setYs] = useState([]);
-  const [CurrentId, setCurrentId] = useState(undefined);
   const [MaxY, setMaxY] = useState(undefined);
+  const [bottomId, setBottomId] = useState();
+  const [id, setId] = useState(undefined);
 
   function scroll() {
-    if (window.pageYOffset > MaxY && (CurrentId == 16 || CurrentId == 17)) {
-      Router.push("#" + titles[CurrentId]);
+    if (window.pageYOffset > MaxY && (bottomId === 16 || bottomId === 17)) {
+      window.history.pushState(null, null, "#pytanie_" + (bottomId + 1));
+      setId(bottomId);
     } else {
-      var i;
-      for (i = 0; i < Ys.length; i++) {
-        if (Ys[i] < window.pageYOffset && window.pageYOffset < Ys[i + 1]) {
+      for (var i = 0; i < Ys.length; i++) {
+        if (
+          Ys[i] < window.pageYOffset &&
+          window.pageYOffset < Ys[i + 1] &&
+          id !== i
+        ) {
           setShow(true);
-          Router.push("#" + titles[i]);
+          window.history.pushState(null, null, "#pytanie_" + (i + 1));
+          setId(i);
           break;
-        } else if (window.pageYOffset < Ys[0]) {
+        } else if (window.pageYOffset < Ys[0] && id !== "faq") {
           setShow(false);
-          Router.push("/faq");
+          window.history.pushState(null, null, "/faq");
+          setId("faq");
           break;
         }
       }
@@ -155,16 +162,17 @@ export default function faq() {
   });
 
   useEffect(() => {
+    var notStatedYs = [];
     setMaxY(document.body.clientHeight - window.innerHeight);
-    var i;
-    for (i = 0; i < titles.length; i++) {
+    for (var i = 0; i < titles.length; i++) {
       const distance = document
-        .getElementById(titles[i])
+        .getElementById("pytanie_" + (i + 1))
         .getBoundingClientRect().y;
       const y = Math.floor(window.pageYOffset + distance - 1);
-      setYs((oldArray) => [...oldArray, y]);
+      notStatedYs.push(y);
     }
-    if (window.pageYOffset > Ys[0]) {
+    setYs(notStatedYs);
+    if (window.pageYOffset > notStatedYs[0]) {
       setShow(true);
     }
   }, []);
@@ -176,8 +184,9 @@ export default function faq() {
           className="backArrow"
           src={require(`images/back_up.png?webp`)}
           onClick={() => {
-            Router.push("/faq");
+            window.history.pushState(null, null, "/faq");
             window.scrollTo({ top: 0, behavior: "smooth" });
+            setBottomId(null);
           }}
         />
       )}
@@ -199,20 +208,28 @@ export default function faq() {
           {titles.map((val, idx) => {
             return (
               <>
-                <PointerH3 key={idx}>
+                <PointerH3 key={"h3" + idx}>
                   <li
                     onClick={() => {
-                      Router.push("#" + val);
-                      setCurrentId(idx);
-                      document.getElementById(val).scrollIntoView({
-                        behavior: "smooth",
-                      });
+                      window.history.pushState(
+                        null,
+                        null,
+                        "#pytanie_" + (idx + 1)
+                      );
+                      idx === 16 || idx === 17
+                        ? setBottomId(idx)
+                        : setBottomId(idx);
+                      document
+                        .getElementById("pytanie_" + (idx + 1))
+                        .scrollIntoView({
+                          behavior: "smooth",
+                        });
                     }}
                   >
                     {val}
                   </li>
                 </PointerH3>
-                <br />
+                <br key={"br" + idx} />
               </>
             );
           })}
@@ -222,7 +239,7 @@ export default function faq() {
         <hr />
         <br />
         <ol>
-          <h3 id={titles[0]}>
+          <h3 id={"pytanie_1"}>
             <li>{titles[0]}</li>
           </h3>
           Tak, tak i taaaaaaaaaaaak!!! Na wiele sposobów:
@@ -357,7 +374,7 @@ export default function faq() {
           ogromna.
           <br />
           <br />
-          <h3 id={titles[1]}>
+          <h3 id={"pytanie_2"}>
             <li>{titles[1]}</li>
           </h3>
           <ol>
@@ -420,7 +437,7 @@ export default function faq() {
           prostu NIE MA!!!
           <br />
           <br />
-          <h3 id={titles[2]}>
+          <h3 id={"pytanie_3"}>
             <li>{titles[2]}</li>
           </h3>
           Wszystko zależy od tego GDZIE plakatujesz:
@@ -489,7 +506,7 @@ export default function faq() {
           PS.
           <br />
           Zawsze nosimy przy sobie dowód dożsamości.
-          <h3 id={titles[3]}>
+          <h3 id={"pytanie_4"}>
             <li>{titles[3]}</li>
           </h3>
           PLAKACIARY działają wszędzie tam, gdzie znajdzie się entuzjastyczna
@@ -731,7 +748,7 @@ export default function faq() {
           <br />
           <br />
           Wspólnie zwalczmy kulturę gwałtu!
-          <h3 id={titles[4]}>
+          <h3 id={"pytanie_5"}>
             <li>{titles[4]}</li>
           </h3>
           Ile głów i temperamentów, tyle sposobów!
@@ -969,7 +986,7 @@ export default function faq() {
           tej super fajnej pani sklepowej co się z nią zaśmiewasz przy każdym
           kupnie pifka) aby poszły z Tobą na miasto! Podzielcie się następnie z
           nami owocami Waszej akcji, a resztę instrukcji już Wam podeślemy!
-          <h3 id={titles[5]}>
+          <h3 id={"pytanie_6"}>
             <li>{titles[5]}</li>
           </h3>
           Świetnie! Nie wymyśliłybyśmy lepszego spożytkowania pustych metrów
@@ -1098,7 +1115,7 @@ export default function faq() {
           wizerunek i mają dobre relacje z otoczeniem. Dla wielu inwestorów,
           wiarygodność finansowa firmy uzależniona jest bowiem od jej
           wiarygodności społecznej.
-          <h3 id={titles[6]}>
+          <h3 id={"pytanie_7"}>
             <li>{titles[6]}</li>
           </h3>
           <u>Po pierwsze</u>: super ekstra i gratulujemy udanej akcji!!!
@@ -1147,7 +1164,7 @@ export default function faq() {
           </ul>
           <br />
           Dzięki za zrozumienie i nie wahaj.cie się podesłać więcej sugestii!
-          <h3 id={titles[7]}>
+          <h3 id={"pytanie_8"}>
             <li>{titles[7]}</li>
           </h3>
           <u>Po pierwsze</u>: PLAKACIARA bez mandatu to jak uczeń bez pały!!!
@@ -1176,7 +1193,7 @@ export default function faq() {
           umożliwiający komunikację pisaną, audio oraz wideo (indywidualną oraz
           grupową), przesyłanie danych, plików itp. itd. zapewniający wysoką
           jakością szyfrowania danych, nie wymagający podawania numeru telefonu
-          <h3 id={titles[8]}>
+          <h3 id={"pytanie_9"}>
             <li>{titles[8]}</li>
           </h3>
           Super, że masz pomysł i ochotę działać! Jak nie TY i MY, nikt nie
@@ -1232,7 +1249,7 @@ export default function faq() {
           nakładzie (rąk, energii, czasu...) itp., itd. Im więcej informacji –
           przedstawionych w zwięzłej i czytelnej formie – tym łatwiej będzie nam
           się do nich odnieść.
-          <h3 id={titles[9]}>
+          <h3 id={"pytanie_10"}>
             <li>{titles[9]}</li>
           </h3>
           Dobrze się składa bo BARDZO potrzeba nam rąk do pracy!
@@ -1346,7 +1363,7 @@ export default function faq() {
           dołączyć do nas na przynajmniej 12 miesięcy. Nie podejmuj.cie decyzji
           pochopnie: pracy jest trochę ale trud się opłaca a satysfakcja jest
           ogromna.
-          <h3 id={titles[10]}>
+          <h3 id={"pytanie_11"}>
             <li>{titles[10]}</li>
           </h3>
           Tak, tak, tak!
@@ -1357,7 +1374,7 @@ export default function faq() {
           <br />
           Dzięki temu, osoby pragnące dołączyć do naszej akcji lub porozumieć
           się z nami będą mogły z łatwością nawiązać z nami kontakt.
-          <h3 id={titles[11]}>
+          <h3 id={"pytanie_12"}>
             <li>{titles[11]}</li>
           </h3>
           Również tak uważamy!
@@ -1383,7 +1400,7 @@ export default function faq() {
           schodzą za zwykłym pociągnięciem kartki, na tych nieco bardziej
           gładkich należy je zmoczyć wodą, najlepiej ciepłą i chwilę poczekać.
           Sposób działania jak z tapetami!
-          <h3 id={titles[12]}>
+          <h3 id={"pytanie_13"}>
             <li>{titles[12]}</li>
           </h3>
           Cieszymy się i służymy pomocą!
@@ -1452,7 +1469,7 @@ export default function faq() {
           umożliwiający komunikację pisaną, audio oraz wideo (indywidualną oraz
           grupową), przesyłanie danych, plików itp. itd. zapewniający wysoką
           jakością szyfrowania danych, nie wymagający podawania numeru telefonu
-          <h3 id={titles[13]}>
+          <h3 id={"pytanie_14"}>
             <li>{titles[13]}</li>
           </h3>
           Prosimy o przesyłanie propozycjy na mejla: plakaciary@protonmail.com,
@@ -1460,7 +1477,7 @@ export default function faq() {
           czego, za co, w jakim nakładzie (rąk, energii, czasu...) itp., itd. Im
           więcej informacji – przedstawionych w zwięzłej i czytelnej formie –
           tym łatwiej będzie nam się do nich odnieść.
-          <h3 id={titles[14]}>
+          <h3 id={"pytanie_15"}>
             <li>{titles[14]}</li>
           </h3>
           Przeczytałyśmy Twoją wiadomość dokładnie i z uwagą.
@@ -1540,7 +1557,7 @@ export default function faq() {
               height={960}
             />
           </HelpContainer>
-          <h3 id={titles[15]}>
+          <h3 id={"pytanie_16"}>
             <li>{titles[15]}</li>
           </h3>
           Słyszymy.
@@ -1686,10 +1703,10 @@ export default function faq() {
           Żeby zadość uczynić za trud usunięcia naszych plakatów, podsuwamy
           gratisowo rozwiązanie umożliwiające zabezpieczenie terenu pracy (bo
           nie byliście w stanie sobie go wyobrazić)
-          <h3 id={titles[16]}>
+          <h3 id={"pytanie_17"}>
             <li>{titles[16]}</li>
           </h3>
-          <h3 id={titles[17]}>
+          <h3 id={"pytanie_18"}>
             <li>{titles[17]}</li>
           </h3>
           We wszystkich innych kwestiach piszcie do nas na mejla:
