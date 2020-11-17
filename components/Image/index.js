@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function _Image({ src, alt, className, onClick }) {
+function _Image({ src, alt, className }) {
   var trace;
   var webp;
   try {

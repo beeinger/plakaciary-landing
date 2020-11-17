@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ImageText from "../components/ImageText";
 import Router from "next/router";
 import Image from "next/image";
+import Head from "next/head";
 
 const Layout = styled.div`
   margin: 5vh 15vw 0 15vw;
@@ -179,6 +180,9 @@ export default function faq() {
 
   return (
     <Layout>
+      <Head>
+        <title>Plakaciary.pl - FAQ</title>
+      </Head>
       {Show && (
         <img
           className="backArrow"

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ImageText from "../components/ImageText";
 import Socials from "../components/Socials";
 import Router from "next/router";
+import Head from "next/head";
 
 const Title = styled.div`
   margin: 10vh 0px 0px 48px;
@@ -55,6 +56,9 @@ const data = [
 export default function Main() {
   return (
     <>
+      <Head>
+        <title>Plakaciary.pl - Strona głowna</title>
+      </Head>
       <Title>
         <ImageText>PLAKACIARY</ImageText>
         <ImageText>NADCHODZĄ</ImageText>

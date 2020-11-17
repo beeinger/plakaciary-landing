@@ -33,15 +33,41 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta charSet="utf-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="description" content="Strona główna Plakaciar" />
+          <meta
+            name="keywords"
+            content="plakaciary strona głowna landing plakatowania feminizm feministki plakaciary.pl"
+          />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+          <meta name="apple-mobile-web-app-title" content="Strona plakaciar" />
+          <meta name="theme-color" content="#ffffff" />
+
+          <link rel="manifest" href="/manifest.json" />
           <link
-            rel="preload"
-            href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Yeseva+One&display=swap"
-            rel="stylesheet"
-          ></link>
+            href="/icons/favicon-16x16.png"
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+          />
           <link
-            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            href="/icons/favicon-32x32.png"
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+          />
+          <link rel="apple-touch-icon" href="/icons/apple-icon-57x57.png" />
+          <link
+            rel="apple-touch-startup-icon"
+            href="/icons/apple-icon-57x57.png"
+          />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Roboto&display=swap"
             rel="stylesheet"
-          ></link>
+          />
         </Head>
         <body>
           <Main />
