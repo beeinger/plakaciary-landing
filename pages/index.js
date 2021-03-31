@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import ImageText from "../components/ImageText";
-import Socials from "../components/Socials";
-import Router from "next/router";
 import Head from "next/head";
+import ImageText from "../components/ImageText";
+import React from "react";
+import Router from "next/router";
+import Socials from "../components/Socials";
+import styled from "styled-components";
 
 const Title = styled.div`
   margin: 10vh 0px 0px 48px;
@@ -41,7 +41,7 @@ const data = [
   { variant: "twitter", link: "https://twitter.com/plakaciary" },
   {
     variant: "instagram",
-    link: "https://www.instagram.com/plakaciary_polska/",
+    link: "https://www.instagram.com/plakaciary",
   },
   {
     variant: "facebook",
