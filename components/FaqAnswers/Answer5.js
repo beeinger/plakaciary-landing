@@ -13,7 +13,11 @@ const Answer5 = React.forwardRef((props, ref) => (
     Naszą fejsbukową społeczność znajdziesz w zakładce GRUPY na naszym fan peju:
     <br />
     <br />
-    <Image src={require(`images/grupy.png?webp`)} width={658} height={550} />
+    <Image
+      src={require(`images/picturesWEBP/grupy.webp`)}
+      width={658}
+      height={550}
+    />
     <br />
     <br />
     Oto istniejące obecnie grupy:

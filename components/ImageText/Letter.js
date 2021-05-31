@@ -1,5 +1,5 @@
-import React from "react";
 import Image from "../Image";
+import React from "react";
 import styled from "styled-components";
 
 const special = {
@@ -23,7 +23,12 @@ function _Letter({ char: _char, className }) {
   return char === " " ? (
     <span className={className} />
   ) : (
-    <Image className={className} src={"alphabet/" + char + ".png"} alt={char} />
+    <Image
+      className={className}
+      svg={"alphabetSVG/" + char + ".svg"}
+      webp={"alphabetWEBP/" + char + ".webp"}
+      alt={char}
+    />
   );
 }
 

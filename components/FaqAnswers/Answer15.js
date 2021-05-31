@@ -1,6 +1,6 @@
 import { HelpContainer, Red } from "./answerStyles";
 
-import { Image } from "next/image";
+import Image from "next/image";
 import React from "react";
 
 const Answer15 = React.forwardRef((props, ref) => (
@@ -58,25 +58,25 @@ const Answer15 = React.forwardRef((props, ref) => (
     <HelpContainer>
       <Image
         className="kryzys"
-        src={require(`images/pomoc_kryzys1.jpg?webp`)}
+        src={require(`images/picturesWEBP/pomoc_kryzys1.webp`)}
         width={560}
         height={960}
       />
       <Image
         className="lgbt"
-        src={require(`images/pomoc_lgbt1.jpg?webp`)}
+        src={require(`images/picturesWEBP/pomoc_lgbt1.webp`)}
         width={560}
         height={960}
       />
       <Image
         className="dom"
-        src={require(`images/pomoc_dom1.jpg?webp`)}
+        src={require(`images/picturesWEBP/pomoc_dom1.webp`)}
         width={560}
         height={960}
       />
       <Image
         className="kobieta"
-        src={require(`images/pomoc_kobieta1.jpg?webp`)}
+        src={require(`images/picturesWEBP/pomoc_kobieta1.webp`)}
         width={560}
         height={960}
       />

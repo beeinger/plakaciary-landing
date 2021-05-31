@@ -19,6 +19,7 @@ import {
 } from "../components/FaqAnswers";
 import React, { useEffect, useRef, useState } from "react";
 
+import Fuse from "fuse.js";
 import ImageText from "../components/ImageText";
 import Router from "next/router";
 import styled from "styled-components";
@@ -182,6 +183,9 @@ export default function faq() {
   }
 
   function search() {
+    const options = {
+      includeScore: true,
+    };
     const refs = [
       answer1,
       answer2,
@@ -201,13 +205,17 @@ export default function faq() {
       answer16,
       answer18,
     ];
-    const text = "i";
+    const answers = [];
+    const text = "komunikator";
     for (let i = 0; i < refs.length; i++) {
-      const ref = refs[i].current.textContent;
-      if (ref.includes(text)) {
-        console.log(i + 1);
-      }
+      const answer = refs[i].current.textContent;
+      answers.push(answer);
     }
+
+    const fuse = new Fuse(answers, options);
+
+    const found = fuse.search(text);
+    console.log(found);
   }
 
   useEffect(() => {
@@ -238,7 +246,7 @@ export default function faq() {
       {Show && (
         <img
           className="backArrow"
-          src={require(`images/back_up.png?webp`)}
+          src={require(`images/back_up.webp`)}
           onClick={() => {
             window.history.pushState(null, null, "/faq");
             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -249,13 +257,13 @@ export default function faq() {
       <Title>
         <img
           className="home"
-          src={require(`images/Home.png?webp`)}
+          src={require(`images/Home.webp`)}
           onClick={() => Router.push("/")}
           height="8%"
         />
         <img
           className="find"
-          src={require(`images/Home.png?webp`)}
+          src={require(`images/Home.webp`)}
           onClick={search}
           height="8%"
         />

@@ -38,7 +38,11 @@ const Answer6 = React.forwardRef((props, ref) => (
     WSPIERAJĄ @TAG":
     <br />
     <br />
-    <Image src={require(`images/sponsor.jpg?webp`)} width={728} height={858} />
+    <Image
+      src={require(`images/picturesWEBP/sponsor.webp`)}
+      width={728}
+      height={858}
+    />
     <br />
     <br />
     Zamieszczony powyżej przykład opublikowany został na samym początku naszej
@@ -55,7 +59,7 @@ const Answer6 = React.forwardRef((props, ref) => (
     <br />
     <br />
     <Image
-      src={require(`images/plakat_historia.png?webp`)}
+      src={require(`images/picturesWEBP/plakat_historia.webp`)}
       width={684}
       height={423}
     />
@@ -65,7 +69,11 @@ const Answer6 = React.forwardRef((props, ref) => (
     najśmielsze oczekiwania:
     <br />
     <br />
-    <Image src={require(`images/zasiegi.png?webp`)} width={678} height={155} />
+    <Image
+      src={require(`images/picturesWEBP/zasiegi.webp`)}
+      width={678}
+      height={155}
+    />
     <br />
     <br />
     Tak więc, DOBRY wybór hasła to PODSTAWA sukcesu!

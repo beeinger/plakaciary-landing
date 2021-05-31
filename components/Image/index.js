@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-function _Image({ src, alt, className, onClick }) {
+function _Image({ svg, webp: _webp, alt, className }) {
   var trace;
   var webp;
   try {
-    trace = require(`images/${src}?trace`).trace;
-    webp = require(`images/${src}?webp`);
+    trace = require(`images/${svg}`);
+    webp = require(`images/${_webp}`);
   } catch (error) {
-    trace = require(`images/alphabet/question_mark.png?trace`).trace;
-    webp = require(`images/alphabet/question_mark.png?webp`);
+    trace = require(`images/alphabetSVG/question_mark.svg`);
+    webp = require(`images/alphabetWEBP/question_mark.webp`);
   }
   return (
     <div className={className}>
