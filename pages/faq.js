@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
+
+import Head from "next/head";
+import Image from "next/image";
 import ImageText from "../components/ImageText";
 import Router from "next/router";
-import Image from "next/image";
-import Head from "next/head";
+import styled from "styled-components";
 
 const Layout = styled.div`
   margin: 5vh 15vw 0 15vw;
@@ -211,8 +212,8 @@ export default function faq() {
         <ol>
           {titles.map((val, idx) => {
             return (
-              <>
-                <PointerH3 key={"h3" + idx}>
+              <React.Fragment key={idx}>
+                <PointerH3>
                   <li
                     onClick={() => {
                       window.history.pushState(
@@ -233,8 +234,8 @@ export default function faq() {
                     {val}
                   </li>
                 </PointerH3>
-                <br key={"br" + idx} />
-              </>
+                <br />
+              </React.Fragment>
             );
           })}
         </ol>
@@ -253,7 +254,7 @@ export default function faq() {
             <li>wspierając ruch organizacyjno-administracyjnie</li>
             <li>
               pomagając nam finansowo:{" "}
-              <a target="_blank" href="https://zrzutka.pl/wdy5bp">
+              <a target="_blank" href="https://zrzutka.pl/2ucrkf">
                 zrzutka
               </a>
             </li>
